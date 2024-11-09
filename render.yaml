@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: book-recommendation45  # Your service name on Render
+    env: python
+    buildCommand: pip install -r requirements.txt  # Install Python dependencies
+    startCommand: python app.py  # Command to run your app (adjust if using a different framework like Flask/Django)
+    branch: main  # Replace with your branch if it's different
+    autoDeploy: true  # Automatically redeploy on changes
+build:
+  commands:
+    - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y  # Install Rust
+    - source $HOME/.cargo/env  # Add Rust to the PATH
+    - pip install -r requirements.txt  # Install Python dependencies
