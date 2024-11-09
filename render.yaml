@@ -3,7 +3,7 @@ services:
     name: book-recommendation45  # Your service name on Render
     env: python
     buildCommand: pip install -r requirements.txt  # Install Python dependencies
-    startCommand: python app.py  # Command to run your app (adjust if using a different framework like Flask/Django)
+    startCommand: streamlit run app.py --server.port $PORT  # Command to run your app (adjust if using a different framework like Flask/Django)
     branch: main  # Replace with your branch if it's different
     autoDeploy: true  # Automatically redeploy on changes
 build:
