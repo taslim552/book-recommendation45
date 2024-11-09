@@ -116,4 +116,4 @@ websocket-client==1.8.0
 widgetsnbextension==4.0.13
 wheel
 cython
-
+altair==4.2.0  # Or whichever version you need
